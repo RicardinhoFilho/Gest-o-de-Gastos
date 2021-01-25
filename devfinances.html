@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html lang="pr-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dev.finances$</title>
+    <link rel="stylesheet" href="./devfinances.css">
 </head>
 <body>
-    <h1>dev.finances$</h1>
+    <header>
+        <h1 id="logo">dev.finances$</h1>
+    </header>
+    <main>
+        <section id="balance">
+            <h2>Balanço</h2>
 
-    <h2>Balanço</h2>
+            <div class="card">
+                <h3>Entradas</h3>
+                <p>R$ 5.000,00</p>
+            </div>
 
-    <h3>Entradas</h3>
-    <p>R$ 5.000,00</p>
+            <div class="card"></div>
+            <h3>Saídas</h3>
+            <p>R$ 2.000,00</p>
+            </div>
 
-    <h3>Saídas</h3>
-    <p>R$ 2.000,00</p>
+            <div class="card"></div>
+            <h3>Total</h3>
+            <p>R$ 3.000,00</p>
+            </div>
+        </section>
 
-    <h3>Total</h3>
-    <p>R$ 3.000,00</p>
 
+
+        <section id="data-table">
+            <table>
+                <thead>
+                    <th>Descrição</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Luz</td>
+                        <td>R$-500</td>
+                        <td>22/07/2020</td>
+                    </tr>
+
+                    <tr>
+                        <td>Website</td>
+                        <td>R$5000</td>
+                        <td>22/07/2020</td>
+                    </tr>
+
+                    <tr>
+                        <td>Internet</td>
+                        <td>R$-200</td>
+                        <td>22/07/2020</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+    <footer>dev.finances$</footer>
 </body>
+
 </html>
