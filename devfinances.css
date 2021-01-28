@@ -2,6 +2,10 @@
 {
     --dark-blue: #363f5f;
 } 
+html
+{
+    font-size: 97.7%; /*15 px*/
+}
 /*Global=========================================================================*/
 *
 {
@@ -17,6 +21,7 @@ body
 .conteiner
 {
     width: min(90vw,800px);
+    /*width: 800px;*/
     margin: auto;
 }
 /*Titles=========================================================================*/
@@ -27,10 +32,26 @@ h2
     margin-bottom: 0.8rem;
     
 }
+/*Links & Butons =========================================================================*/
+a
+{
+    color: #2d4a22;
+}
+a:hover
+{
+    color: #3dd705;
+}
+a.button.new
+{
+    display: inline-block;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
 /*Header=========================================================================*/
 header
 {
-  background-color: #2d4a22;  
+  background-color: #2d4a22; 
+  width: 100%; 
   padding: 2rem 0 10rem ;
   text-align: center;
 }
@@ -42,12 +63,21 @@ header #logo
 /*Balance=========================================================================*/
 #balance
 {
-  margin: -5.5rem;  
+    margin-top: -8rem; 
 }
 #balance h2
 {
-    margin-top: 0;
+    padding: 0%;
+    margin: 10px 0 0 10px;
     color: white;
+}
+
+
+h3
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 /*Card=========================================================================*/
 .card
@@ -79,16 +109,21 @@ header #logo
 /*Table=========================================================================*/
 #data-table
 {
+    display: block;
     width: 100%;
     border-spacing: 0 0.5rem;
-    color: var(--dark-blue);
-    font-size: 16px;
-    margin: auto;
+    color: #969cb3;
+    overflow-x/*(eixo x)*/: auto;/*Agora quando necessário a rolagem da tabela é permitida(funcionamento para o mobile)*/
     
     
 }
 table thead tr th:first-child,
 table tbody tr td:first-child
+{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+table thead tr th:last-child,
+table tbody tr td:last-child
 {
     border-radius: 0 0.25rem 0.25rem 0;
 }
@@ -106,12 +141,12 @@ table th
     opacity: 0.6;
     font-weight: normal;
     text-align: left;
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
 }
 table td
 {
     background-color: white;
-    padding: 1rem 8rem;
+    padding: 1rem 5rem;
 }
 td.description
 {
@@ -125,13 +160,106 @@ td.expense
 {
     color: #e92929;
 }
+/*Modal=========================================================================*/
+.modal-overlay/*caixa de dialogo antes de ser ativada*/
+{
+    background-color: rgba(0, 0, 0, 0.7);
 
+    width: 100%;
+    height: 100%;
+    
+    position: fixed; /*Alterando posição padrão*/
+    top: 0; /*preenchendo todo o topo*/
 
+    display: flex; /*transformando a caixa flexivel*/
+    align-items: center;/*alinhando os itens ao centro*/
+    justify-content: center;/*deixando nossa caixa totalmente ao centro*/
 
+    opacity: 0;/*fica invisivel entretanto ocupa espaço*/
+    visibility: hidden;/*não ocupa mais espaço nenhum*/
+
+}
+.modal-overlay.active/*caixa de dialogo depois de ser ativada alterando opacity e visibility*/
+{
+    opacity: 1;
+    visibility: visible;
+}
+.modal
+{
+    margin-top: 0;
+    background-color: #f0f2f5;
+    padding: 3.5rem;
+
+}
+/*form=========================================================================*/
+#form
+{
+    max-width: 500px;
+}
+#form h2
+{
+    margin-top: 0;
+}
+
+input
+{
+    border: none;
+    border-radius: 0.25rem;
+
+    padding: 0.8rem;
+
+    width: 100%;
+
+}
+
+.input-group
+{
+    margin-top: 0.8rem;
+}
+
+small.help
+{
+    opacity: 0.4;
+}
+
+.input-group.action
+{
+    display: flex;/*destravar seu posicionamento*/
+    align-items: center;/*alinhando eles ao centro(facarem ao mesmo nível)*/
+    justify-content: space-between;/*espaçamento deles de distancia ao centro*/
+}
 /*Footer=========================================================================*/
 footer
 {
     text-align: center;
     color: var(--dark-blue);
     padding: 2rem 4rem;
+}
+/*Responsividade=========================================================================*/
+
+@media(min-width: 800px)
+{
+    html
+    {
+        font-size: 87.5%;
+    }
+    .sr-only
+    {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    }
+
+    #balance
+    {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: -8rem;
+    }
 }
