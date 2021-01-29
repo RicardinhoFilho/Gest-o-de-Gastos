@@ -6,7 +6,7 @@
 } 
 html
 {
-    font-size: 97.7%; /*15 px*/
+    font-size: 85.75%; /*15 px*/
 }
 /*Global=========================================================================*/
 *
@@ -17,7 +17,7 @@ html
 }
 body
 {
-    background-color: #f0f2f5;
+    background-color:#f0f2f5;
     font-family: 'Times New Roman', Times, serif;
 }
 .conteiner
@@ -149,6 +149,7 @@ h3
 /*Table=========================================================================*/
 #data-table
 {
+    font-size: 18;
     display: block;
     width: 100%;
     border-spacing: 0 0.5rem;
@@ -169,7 +170,8 @@ table tbody tr td:last-child
 }
 table tr
 {
-    opacity: 0.7;
+    opacity: 0.6;
+    background-color: white;
 }
 table tr:hover
 {
@@ -178,7 +180,8 @@ table tr:hover
 table th
 {
     background-color: white;
-    opacity: 0.6;
+    opacity: 0.8;
+    color: var(--dark-blue);
     font-weight: normal;
     text-align: left;
     padding: 1rem 1rem;
@@ -199,6 +202,10 @@ td.income
 td.expense
 {
     color: #e92929;
+}
+td.date
+{
+    color: var(--dark-blue);
 }
 /*Modal=========================================================================*/
 .modal-overlay/*caixa de dialogo antes de ser ativada*/

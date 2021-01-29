@@ -21,7 +21,7 @@
                     <span>Entrada</span>
                     <img src="./assets/income.svg" alt="Imagem de Entrada">
                 </h3>
-                <p>R$ 5.000,00</p>
+                <p id="incomeDisplay"></p>
             </div>
 
             <div class="card">
@@ -29,7 +29,7 @@
                 <span>Saídas</span>
                 <img src="./assets/expense.svg" alt="Imagem de Saídas">
             </h3>
-            <p>R$ 2.000,00</p>
+            <p id="expenseDisplay"></p>
             </div>
 
             <div class="card total">
@@ -37,7 +37,7 @@
                 <span>Total</span>
                 <img src="./assets/total.svg" alt="Imagem de Total">
             </h3>
-            <p>R$ 3.000,00</p>
+            <p id="totalDisplay"></p>
             </div>
         </section>
 
@@ -59,27 +59,7 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="description">Luz</td>
-                        <td class="expense">R$-500</td>
-                        <td class="date">22/07/2020</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-
-                    <tr>
-                        <td class="description">Website</td>
-                        <td class="income">R$5000</td>
-                        <td class="date">22/07/2020</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-
-                    <tr>
-                        <td class="description">Internet</td>
-                        <td class="expense">R$-200</td>
-                        <td class="date">22/07/2020</td>
-                        <td><img src="./assets/minus.svg" alt="Remover Transação"></td>
-                    </tr>
-
+                   
                 </tbody>
             </table>
         </section>
@@ -116,27 +96,8 @@
     </div>
     <footer>dev.finances$</footer>
 
-    <script>
-   const Modal = {
-    open(){
-        // Abrir modal
-        // Adicionar a class active ao modal
-        document
-            .querySelector('.modal-overlay')
-            .classList
-            .add('active')
-
-    },
-    close(){
-        // fechar o modal
-        // remover a class active do modal
-        document
-            .querySelector('.modal-overlay')
-            .classList
-            .remove('active')
-    }
-}
-    </script>
+    <script src="./devfinances.js"></script>
+    
 </body>
 
 </html>
