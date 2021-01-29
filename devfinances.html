@@ -48,7 +48,9 @@
         
             <section id="data-table">
                 <h2>Transações</h2>
-                <a href="#" class="button new"> + Nova Transação</a>
+                <a href="#" 
+                onclick="Modal.open()"
+                class="button new"> + Nova Transação</a>
             <table>
                 <thead>
                     <th>Descrição</th>
@@ -83,7 +85,7 @@
         </section>
 
     </main>
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal">
             
                 <div id="form">
@@ -103,7 +105,7 @@
                         </div>
 
                         <div class="input-group action">
-                            <a href="#" class="button-cancel">Cancelar</a>
+                            <a href="#" onclick="Modal.close()" class="button-cancel">Cancelar</a>
                             <button class="button-save">Salvar</button>
                         </div>    
                     </form>
@@ -113,6 +115,28 @@
         </div>
     </div>
     <footer>dev.finances$</footer>
+
+    <script>
+   const Modal = {
+    open(){
+        // Abrir modal
+        // Adicionar a class active ao modal
+        document
+            .querySelector('.modal-overlay')
+            .classList
+            .add('active')
+
+    },
+    close(){
+        // fechar o modal
+        // remover a class active do modal
+        document
+            .querySelector('.modal-overlay')
+            .classList
+            .remove('active')
+    }
+}
+    </script>
 </body>
 
 </html>

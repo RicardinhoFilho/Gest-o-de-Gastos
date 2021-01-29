@@ -1,6 +1,8 @@
 :root 
 {
     --dark-blue: #363f5f;
+    --dark-green: #2d4a22;
+    --light-green:#3dd705;
 } 
 html
 {
@@ -35,11 +37,12 @@ h2
 /*Links & Butons =========================================================================*/
 a
 {
-    color: #2d4a22;
+    color:var(--dark-green);
+    text-decoration: none;
 }
 a:hover
 {
-    color: #3dd705;
+    color: var(--light-green);
 }
 a.button.new
 {
@@ -47,10 +50,46 @@ a.button.new
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
+
+button
+{
+    border: 0;
+    border-radius: 0.25rem;
+    
+    color: white;
+    background-color: var(--dark-green);
+    
+    padding: 2rem;
+    cursor: pointer;
+}
+
+button:hover
+{
+    background-color: var(--light-green);
+}
+
+a.button-cancel
+{
+    color: red;
+    border:2px red solid;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+
+    height: 4rem;
+    padding: 2rem;
+} 
+
+a.button-cancel:hover
+{
+    opacity: 1;
+}
 /*Header=========================================================================*/
 header
 {
-  background-color: #2d4a22; 
+  background-color: var(--dark-green); 
   width: 100%; 
   padding: 2rem 0 10rem ;
   text-align: center;
@@ -84,6 +123,7 @@ h3
 {
     margin-top: 3.2rem;
     margin-bottom: 0.8;
+    margin-left: 2rem;
     padding: 0.8rem;
     background-color: white;
     color: var(--dark-blue);
@@ -227,6 +267,11 @@ small.help
     display: flex;/*destravar seu posicionamento*/
     align-items: center;/*alinhando eles ao centro(facarem ao mesmo nível)*/
     justify-content: space-between;/*espaçamento deles de distancia ao centro*/
+}
+
+button, a.cancel
+{
+    width: 48%;
 }
 /*Footer=========================================================================*/
 footer
