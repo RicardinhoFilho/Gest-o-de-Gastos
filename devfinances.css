@@ -207,6 +207,11 @@ td.date
 {
     color: var(--dark-blue);
 }
+img.remove:hover{
+
+    cursor: pointer;
+
+}
 /*Modal=========================================================================*/
 .modal-overlay/*caixa de dialogo antes de ser ativada*/
 {
